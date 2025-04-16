@@ -33,14 +33,22 @@ namespace TP_A16Book_Store.Controllers
                 return NotFound();
             }
 
-            var genres = await _context.Genres
+            var genre = await _context.Genres
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (genres == null)
+
+            if (genre == null)
             {
                 return NotFound();
             }
 
-            return View(genres);
+            // Books list for this genre
+            var booksInGenre = await _context.Books
+                .Where(b => b.Genre == genre.Name)
+                .ToListAsync();
+
+            ViewBag.BooksInGenre = booksInGenre;
+
+            return View(genre);
         }
 
         // GET: Genres/Create

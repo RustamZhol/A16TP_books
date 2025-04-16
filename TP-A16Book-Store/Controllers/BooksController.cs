@@ -20,13 +20,87 @@ namespace TP_A16Book_Store.Controllers
         }
 
         // GET: Books
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string sortOrder, string searchTerm, string filterColumn, string filterValue)
         {
-            // Get books list using EF Core
-            var books = await _context.Books.ToListAsync();
-   
-            return View(books);
+            IQueryable<Books> booksQuery = _context.Books;
+            ViewBag.CurrentSortOrder = sortOrder;
+            ViewBag.CurrentSearchTerm = searchTerm;
+            ViewBag.CurrentFilterColumn = filterColumn;
+            ViewBag.CurrentFilterValue = filterValue;
+
+            // Filter
+            if (!string.IsNullOrEmpty(filterColumn) && !string.IsNullOrEmpty(filterValue))
+            {
+                booksQuery = _context.Books.FromSqlRaw("EXECUTE dbo.FilterBooks @FilterColumn = {0}, @FilterValue = {1}", filterColumn, filterValue);
+            }
+
+            // Search 
+            if (!string.IsNullOrEmpty(searchTerm))
+            {
+                booksQuery = _context.Books.FromSqlRaw("EXECUTE dbo.SearchBooks @SearchTerm = {0}", searchTerm);
+            }
+
+            // Sort
+            if (!string.IsNullOrEmpty(sortOrder))
+            {
+                switch (sortOrder)
+                {
+                    case "TitleAsc":
+                        booksQuery = booksQuery.OrderBy(b => b.Title);
+                        break;
+                    case "TitleDesc":
+                        booksQuery = booksQuery.OrderByDescending(b => b.Title);
+                        break;
+                    case "AuthorAsc":
+                        booksQuery = booksQuery.OrderBy(b => b.Author);
+                        break;
+                    case "AuthorDesc":
+                        booksQuery = booksQuery.OrderByDescending(b => b.Author);
+                        break;
+                    case "YearAsc":
+                        booksQuery = booksQuery.OrderBy(b => b.Year);
+                        break;
+                    case "YearDesc":
+                        booksQuery = booksQuery.OrderByDescending(b => b.Year);
+                        break;
+                    case "PriceAsc":
+                        booksQuery = booksQuery.OrderBy(b => b.Price);
+                        break;
+                    case "PriceDesc":
+                        booksQuery = booksQuery.OrderByDescending(b => b.Price);
+                        break;
+                    case "IdAsc": 
+                        booksQuery = booksQuery.OrderBy(b => b.Id);
+                        break;
+                    default:
+                        booksQuery = booksQuery.OrderBy(b => b.Id); 
+                        break;
+                }
+            }
+            else
+            {
+                booksQuery = booksQuery.OrderBy(b => b.Id); 
+            }
+
+            return View(await booksQuery.ToListAsync());
         }
+
+        public async Task<IActionResult> Search(string searchTerm)
+        {
+            if (string.IsNullOrEmpty(searchTerm))
+            {
+                return RedirectToAction("Index");
+            }
+
+            var books = await _context.Books
+                .FromSqlRaw("EXECUTE dbo.SearchBooks @SearchTerm = {0}", searchTerm)
+                .ToListAsync();
+
+            ViewBag.CurrentSearchTerm = searchTerm;
+            return View("Index", books); 
+        }
+
+
 
         // GET: Books/Details/5
         public async Task<IActionResult> Details(int? id)

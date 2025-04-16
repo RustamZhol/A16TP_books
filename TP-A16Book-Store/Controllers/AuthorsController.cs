@@ -27,21 +27,30 @@ namespace TP_A16Book_Store.Controllers
 
         // GET: Authors/Details/5
         public async Task<IActionResult> Details(int? id)
+    {
+        if (id == null)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var authors = await _context.Authors
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (authors == null)
-            {
-                return NotFound();
-            }
-
-            return View(authors);
+            return NotFound();
         }
+
+        var author = await _context.Authors
+            .FirstOrDefaultAsync(m => m.Id == id);
+
+        if (author == null)
+        {
+            return NotFound();
+        }
+
+        // Get books list for this author
+        var booksByAuthor = await _context.Books
+            .Where(b => b.Author == author.Name)
+            .ToListAsync();
+
+        // Pass in view author and his books list using ViewBag
+        ViewBag.BooksByAuthor = booksByAuthor;
+
+        return View(author);
+    }
 
         // GET: Authors/Create
         public IActionResult Create()

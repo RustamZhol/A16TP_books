@@ -22,28 +22,23 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Books" asp-action="Index">Books</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Authors" asp-action="Index">Authors</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Genres" asp-action="Index">Genres</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Types" asp-action="Index">Types</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Orders" asp-action="Index">Orders</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="OrderDetails" asp-action="Index">OrderDetails</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link text-dark dropdown-toggle" href="#" id="navbarDropdownBooks" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Books
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownBooks">
+                                <li><a class="dropdown-item" asp-controller="Books" asp-action="Index">All Books</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" asp-controller="Genres" asp-action="Index" asp-route-filterColumn="Genre">Genres</a></li>
+                                <li><a class="dropdown-item" asp-controller="Authors" asp-action="Index" asp-route-filterColumn="Author">Authors</a></li>
+                                <li><a class="dropdown-item" asp-controller="Types" asp-action="Index" asp-route-filterColumn="Type">Types</a></li>
+                            </ul>
                         </li>
                     </ul>
+                    <form class="d-flex" asp-controller="Books" asp-action="Search" method="get">
+                        <input class="form-control me-2" type="search" placeholder="Search by title or description" aria-label="Search" name="searchTerm">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
                     <ul class="navbar-nav">
                         @if (User.Identity.IsAuthenticated)
                         {

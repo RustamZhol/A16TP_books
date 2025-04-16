@@ -33,14 +33,22 @@ namespace TP_A16Book_Store.Controllers
                 return NotFound();
             }
 
-            var types = await _context.Types
+            var type = await _context.Types
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (types == null)
+
+            if (type == null)
             {
                 return NotFound();
             }
 
-            return View(types);
+            // Get books list for this type
+            var booksOfType = await _context.Books
+                .Where(b => b.Type == type.Name)
+                .ToListAsync();
+
+            ViewBag.BooksOfType = booksOfType;
+
+            return View(type);
         }
 
         // GET: Types/Create

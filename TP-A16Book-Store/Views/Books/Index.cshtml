@@ -9,75 +9,72 @@
 <p>
     <a asp-action="Create">Create New</a>
 </p>
+
+<form asp-action="Index" method="get">
+    <div class="form-group">
+        <label for="sortOrder">Sort by:</label>
+        <select class="form-control" id="sortOrder" name="sortOrder" onchange="this.form.submit()">
+            <option value="" selected="@(string.IsNullOrEmpty(ViewBag.CurrentSortOrder))">-- Select -- (Default)</option>
+            <option value="IdAsc" selected="@(ViewBag.CurrentSortOrder == "IdAsc")">By Id</option>
+            <option value="TitleAsc" selected="@(ViewBag.CurrentSortOrder == "TitleAsc")">Title (A-Z)</option>
+            <option value="TitleDesc" selected="@(ViewBag.CurrentSortOrder == "TitleDesc")">Title (Z-A)</option>
+            <option value="AuthorAsc" selected="@(ViewBag.CurrentSortOrder == "AuthorAsc")">Author (A-Z)</option>
+            <option value="AuthorDesc" selected="@(ViewBag.CurrentSortOrder == "AuthorDesc")">Author (Z-A)</option>
+            <option value="YearAsc" selected="@(ViewBag.CurrentSortOrder == "YearAsc")">Year (Ascending)</option>
+            <option value="YearDesc" selected="@(ViewBag.CurrentSortOrder == "YearDesc")">Year (Descending)</option>
+            <option value="PriceAsc" selected="@(ViewBag.CurrentSortOrder == "PriceAsc")">Price (Low to High)</option>
+            <option value="PriceDesc" selected="@(ViewBag.CurrentSortOrder == "PriceDesc")">Price (High to Low)</option>
+        </select>
+    </div>
+    <input type="hidden" name="searchTerm" value="@ViewBag.CurrentSearchTerm" />
+    <input type="hidden" name="filterColumn" value="@ViewBag.CurrentFilterColumn" />
+    <input type="hidden" name="filterValue" value="@ViewBag.CurrentFilterValue" />
+</form>
+
 <table class="table">
     <thead>
         <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Title)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Author)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Year)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Genre)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Type)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Price)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Description)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ImageUrl)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Quantity)
-            </th>
+            <th>@Html.DisplayNameFor(model => model.Title)</th>
+            <th>@Html.DisplayNameFor(model => model.Author)</th>
+            <th>@Html.DisplayNameFor(model => model.Year)</th>
+            <th>@Html.DisplayNameFor(model => model.Genre)</th>
+            <th>@Html.DisplayNameFor(model => model.Type)</th>
+            <th>@Html.DisplayNameFor(model => model.Price)</th>
+            <th>@Html.DisplayNameFor(model => model.Quantity)</th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Title)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Author)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Year)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Genre)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Type)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Price)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Description)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ImageUrl)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Quantity)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    <a asp-action="Details" asp-route-id="@item.Id">@Html.DisplayFor(modelItem => item.Title)</a>
+                </td>
+                <td>
+                    <a asp-controller="Authors" asp-action="Details" asp-route-id="@item.Id">@Html.DisplayFor(modelItem => item.Author)</a>
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Year)
+                </td>
+                <td>
+                    <a asp-controller="Genres" asp-action="Details" asp-route-id="@item.Id">@Html.DisplayFor(modelItem => item.Genre)</a>
+                </td>
+                <td>
+                    <a asp-controller="Types" asp-action="Details" asp-route-id="@item.Id">@Html.DisplayFor(modelItem => item.Type)</a>
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Price)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Quantity)
+                </td>
+                <td>
+                    @* <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
                 <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a> *@
+                </td>
+            </tr>
+        }
     </tbody>
 </table>

@@ -10,14 +10,66 @@
     <h4>Authors</h4>
     <hr />
     <dl class="row">
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Name)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Name)
         </dd>
     </dl>
 </div>
+
+<div>
+    <h4>Books by @Model.Name</h4>
+    @if (ViewBag.BooksByAuthor != null)
+    {
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Year</th>
+                    <th>Genre</th>
+                    <th>Type</th>
+                    <th>Price</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var book in ViewBag.BooksByAuthor as List<TP_A16Book_Store.Models.Books>)
+                {
+                    <tr>
+                        <td>
+                            <a asp-controller="Books" asp-action="Details" asp-route-id="@book.Id">@book.Title</a>
+                        </td>
+                        <td>
+                            @book.Year
+                        </td>
+                        <td>
+                            @book.Genre
+                        </td>
+                        <td>
+                            @book.Type
+                        </td>
+                        <td>
+                            @book.Price
+                        </td>
+                        <td>
+                            @* <div>
+                    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+                    <a asp-action="Index">Back to List</a>
+                    </div> *@
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <p>No books by this author yet.</p>
+    }
+</div>
+
 <div>
     <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
     <a asp-action="Index">Back to List</a>
