@@ -38,6 +38,7 @@ namespace TP_A16Book_Store.Models
 
         public int Quantity { get; set; }
 
+        public Books(){}
         public Books(int id, string title, string author, int year, string genre, string type, decimal price, string description, string imageUrl, int quantity)
         {
             Id = id;

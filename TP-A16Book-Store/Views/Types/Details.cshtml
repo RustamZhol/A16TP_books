@@ -4,14 +4,10 @@
     ViewData["Title"] = "Details";
 }
 
-
-<div>
+<div class="styled-details-container">
     <h4>Type: @Html.DisplayFor(model => model.Name)</h4>
-    <hr />
-    
-</div>
+    <hr class="styled-hr" />
 
-<div>
     <h4>Books of Type @Model.Name</h4>
     @if (ViewBag.BooksOfType != null)
     {
@@ -52,6 +48,6 @@
     }
 </div>
 
-<div>|
+<div>
     <a asp-controller="Books" asp-action="Index">Back to List</a>
 </div>

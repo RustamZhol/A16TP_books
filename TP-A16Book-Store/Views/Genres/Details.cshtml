@@ -5,12 +5,10 @@
 }
 
 
-<div>
+<div class="styled-details-container">
     <h4>Genre: @Html.DisplayFor(model => model.Name)</h4>
-    <hr />
-</div>
+    <hr class="styled-hr" />
 
-<div>
     <h4>Books in @Model.Name</h4>
     @if (ViewBag.BooksInGenre != null)
     {

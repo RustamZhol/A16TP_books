@@ -25,6 +25,50 @@ namespace TP_A16Book_Store.Controllers
             return View(users);
         }
 
+        // GET: CustomUsers/Create
+        [Authorize(Roles = "Admin")]
+        public IActionResult Create()
+        {
+            return View(); 
+        }
+
+        // POST: CustomUsers/Create
+        [Authorize(Roles = "Admin")]
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Create(IdentityUser user, string password)
+        {
+            if (ModelState.IsValid)
+            {
+                var result = await _userManager.CreateAsync(user, password);
+                if (result.Succeeded)
+                {
+                    return RedirectToAction(nameof(Index));
+                }
+                foreach (var error in result.Errors)
+                {
+                    ModelState.AddModelError(string.Empty, error.Description);
+                }
+            }
+            return View(user); 
+        }
+
+        //Method for user details
+        public async Task<IActionResult> Details(string id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var user = await _userManager.FindByIdAsync(id);
+            if (user == null)
+            {
+                return NotFound();
+            }
+            return View(user); 
+        }
+
         //Method for edit user
         [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Edit(string id)

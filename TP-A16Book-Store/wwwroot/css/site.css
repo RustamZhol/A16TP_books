@@ -1,14 +1,357 @@
-.user-avatar {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background-color: #ddd;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 16px;
-  font-weight: bold;
-  color: #333;
+﻿html {
+    height: 100%;
 }
 
-/*# sourceMappingURL=site.css.map */
+body {
+    background-image: url('/images/book_store_banner.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+header {
+    background-color: saddlebrown;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    background-color: transparent !important;
+    border-bottom: none;
+}
+
+.container {
+    flex: 1 0 auto;
+    padding: 0px;
+}
+
+
+/* General navigation styles */
+.navbar-nav {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-nav .nav-item {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.navbar-nav .nav-item:first-child {
+    margin-left: 0;
+}
+
+.navbar.border-bottom {
+    border-bottom: none !important;
+}
+
+/* Adding left margin to the avatar list item */
+.navbar-nav .avatar-item {
+    margin-left: 20px; 
+}
+
+/* Style for the search form */
+.navbar-nav .d-flex {
+    margin-right: 20px; 
+}
+
+.user-avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+   
+}
+
+.navbar-nav .nav-item form {
+    margin-left: 5px;
+}
+
+.navbar-nav .nav-item form button {
+    margin-left: 0;
+}
+
+/* Styles for navigation links */
+.navbar-nav .nav-link {
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #28a745;
+}
+
+/* Style for the brand */
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+    color: #28a745;
+}
+
+/* Style for the dropdown menu */
+.dropdown-menu .dropdown-item {
+    color: #333;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-menu .dropdown-item:hover {
+    background-color: #f8f9fa;
+    color: #28a745;
+}
+
+/* Style for link buttons */
+.btn-link {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.btn-link:hover {
+    color: #28a745;
+    text-decoration: underline;
+}
+
+/* Style for regular buttons */
+.btn-primary, .btn-secondary, .btn-info, .btn-warning, .btn-danger {
+    background-color: #f8f9fa;
+    color: #333;
+    border-color: #ccc;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-primary:hover, .btn-secondary:hover, .btn-info:hover, .btn-warning:hover, .btn-danger:hover {
+    background-color: #28a745;
+    color: white;
+    border-color: #28a745;
+}
+
+.border-top {
+    border-top: none !important;
+}
+
+.footer, footer.border-top.footer.text-muted {
+    background-color: saddlebrown; 
+    flex-shrink: 0; 
+    padding: 1rem 0;
+    color: #212529 !important; 
+    text-align: center; 
+}
+
+    .footer a {
+        color: #212529;
+        transition: color 0.3s ease;
+    }
+
+        .footer a:hover {
+            color: #198754;
+        }
+
+/* Style for the table */
+.table thead th {
+    background-color: transparent;
+    border-bottom: 1px solid #dee2e6 !important; 
+}
+
+.table td {
+    border-bottom: none !important;
+}
+
+.table th {
+    border-bottom: none !important; 
+}
+
+.table a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+    .table a:hover {
+        color: #198754;
+        text-decoration: underline;
+    }
+
+h1 {
+    color: #000 !important; 
+}
+
+.sort-label {
+    color: #000 !important;
+    font-weight: bold;
+}
+
+/* Style for the heading and sort form in the book list */
+.books-list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+/* Style for the sort form */
+.sort-form {
+    margin-bottom: 0;
+}
+
+/* Style for the sort label */
+.sort-label {
+    margin-right: 10px;
+}
+
+/* Style for the sort dropdown */
+.sort-dropdown {
+    width: auto;
+    max-width: 80px;
+}
+
+/* Style for links in the book list */
+#booksIndex a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Additional: Style for link interaction in the book list */
+    #booksIndex a:hover {
+        text-decoration: underline;
+        color: #198754;
+    }
+
+#booksIndex th,
+#booksIndex td,
+#booksIndex h2,
+#booksIndex label,
+#booksIndex select,
+#booksIndex option {
+    color: black !important;
+}
+
+#booksIndex td {
+    background-color: rgba(255, 255, 255, 0.2); 
+    padding: 0.5em;
+}
+
+#booksIndex th {
+    background-color: rgba(255, 255, 255, 0.2); 
+    padding: 0.5em;
+}
+
+#booksIndex h2 {
+    background-color: rgba(255, 255, 255, 0.3); 
+    padding: 0.5em;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+#booksIndex label,
+#booksIndex select {
+    background-color: rgba(255, 255, 255, 0.3); 
+    padding: 0.2em;
+}
+
+
+.page-title {
+    color: black !important;
+    padding: 0.5em;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+
+.styled-table th,
+.styled-table td {
+    color: black !important;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 0.5em;
+    border-bottom: none !important;
+}
+
+.styled-table thead th {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 0.5em;
+}
+
+.styled-table a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.styled-table a:hover {
+    text-decoration: underline;
+    color: #198754;
+}
+
+
+
+.styled-dl {
+    background-color: rgba(255, 255, 255, 0.3); 
+    padding: 1em;
+    margin-bottom: 1em;
+    border-radius: 5px; 
+}
+
+.styled-dl dt {
+    color: black !important;
+    font-weight: bold;
+    padding: 0.3em 0;
+}
+
+.styled-dl dd {
+    color: black !important;
+    padding: 0.3em 0 0.5em;
+    margin-left: 0; 
+}
+
+.styled-dl dt::after {
+    content: ":"; 
+    margin-left: 0.3em;
+}
+
+.styled-dd {
+    word-break: break-word; 
+}
+
+.styled-details-container {
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 1.5em;
+    margin-bottom: 1.5em;
+    border-radius: 5px;
+}
+
+.styled-hr {
+    border-top: 1px solid #ccc;
+    margin-bottom: 1em;
+}
+
+.styled-dt {
+    color: black !important;
+    font-weight: bold;
+    padding: 0.5em 0;
+}
+
+.styled-dd {
+    color: black !important;
+    padding: 0.5em 0 0.7em;
+    margin-left: 0;
+    word-break: break-word;
+}
+
+.styled-dt::after {
+    content: ":";
+    margin-left: 0.3em;
+}

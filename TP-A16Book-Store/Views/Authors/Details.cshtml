@@ -6,20 +6,18 @@
 
 <h1>Details</h1>
 
-<div>
+<div class="styled-details-container">
     <h4>Authors</h4>
-    <hr />
-    <dl class="row">
-        <dt class="col-sm-2">
+    <hr class="styled-hr" />
+    <dl class="row styled-dl">
+        <dt class="col-sm-2 styled-dt">
             @Html.DisplayNameFor(model => model.Name)
         </dt>
-        <dd class="col-sm-10">
+        <dd class="col-sm-10 styled-dd">
             @Html.DisplayFor(model => model.Name)
         </dd>
     </dl>
-</div>
 
-<div>
     <h4>Books by @Model.Name</h4>
     @if (ViewBag.BooksByAuthor != null)
     {
@@ -71,6 +69,8 @@
 </div>
 
 <div>
+    @*
     <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    *@    
+    <a asp-controller="Books" asp-action="Index">Back to List</a>
 </div>

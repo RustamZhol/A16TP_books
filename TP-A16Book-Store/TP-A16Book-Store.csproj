@@ -9,9 +9,13 @@
 
   <ItemGroup>
     <Compile Remove="Views\NewFolder\**" />
+    <Compile Remove="wwwroot\NewFolder1\**" />
     <Content Remove="Views\NewFolder\**" />
+    <Content Remove="wwwroot\NewFolder1\**" />
     <EmbeddedResource Remove="Views\NewFolder\**" />
+    <EmbeddedResource Remove="wwwroot\NewFolder1\**" />
     <None Remove="Views\NewFolder\**" />
+    <None Remove="wwwroot\NewFolder1\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -26,6 +30,10 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\images\" />
   </ItemGroup>
 
 </Project>

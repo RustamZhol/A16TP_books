@@ -4,34 +4,34 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<div class="books-list-header">
+    <h1>Available books list</h1>
+    <form asp-action="Index" method="get" class="sort-form">
+        <div class="form-group" style="display: flex; align-items: center;">
+            <label for="sortOrder" class="sort-label">Sort by:</label>
+            <select class="form-control sort-dropdown" id="sortOrder" name="sortOrder" onchange="this.form.submit()">
+                <option value="" selected="@(string.IsNullOrEmpty(ViewBag.CurrentSortOrder))">Default</option>
+                <option value="TitleAsc" selected="@(ViewBag.CurrentSortOrder == "TitleAsc")">Title (A-Z)</option>
+                <option value="TitleDesc" selected="@(ViewBag.CurrentSortOrder == "TitleDesc")">Title (Z-A)</option>
+                <option value="AuthorAsc" selected="@(ViewBag.CurrentSortOrder == "AuthorAsc")">Author (A-Z)</option>
+                <option value="AuthorDesc" selected="@(ViewBag.CurrentSortOrder == "AuthorDesc")">Author (Z-A)</option>
+                <option value="YearAsc" selected="@(ViewBag.CurrentSortOrder == "YearAsc")">Year (Ascending)</option>
+                <option value="YearDesc" selected="@(ViewBag.CurrentSortOrder == "YearDesc")">Year (Descending)</option>
+                <option value="PriceAsc" selected="@(ViewBag.CurrentSortOrder == "PriceAsc")">Price (Low to High)</option>
+                <option value="PriceDesc" selected="@(ViewBag.CurrentSortOrder == "PriceDesc")">Price (High to Low)</option>
+            </select>
+        </div>
+        <input type="hidden" name="searchTerm" value="@ViewBag.CurrentSearchTerm" />
+        <input type="hidden" name="filterColumn" value="@ViewBag.CurrentFilterColumn" />
+        <input type="hidden" name="filterValue" value="@ViewBag.CurrentFilterValue" />
+    </form>
+</div>
+@if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
+{    
+     <a asp-action="Create">Create New</a>   
+}
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-
-<form asp-action="Index" method="get">
-    <div class="form-group">
-        <label for="sortOrder">Sort by:</label>
-        <select class="form-control" id="sortOrder" name="sortOrder" onchange="this.form.submit()">
-            <option value="" selected="@(string.IsNullOrEmpty(ViewBag.CurrentSortOrder))">-- Select -- (Default)</option>
-            <option value="IdAsc" selected="@(ViewBag.CurrentSortOrder == "IdAsc")">By Id</option>
-            <option value="TitleAsc" selected="@(ViewBag.CurrentSortOrder == "TitleAsc")">Title (A-Z)</option>
-            <option value="TitleDesc" selected="@(ViewBag.CurrentSortOrder == "TitleDesc")">Title (Z-A)</option>
-            <option value="AuthorAsc" selected="@(ViewBag.CurrentSortOrder == "AuthorAsc")">Author (A-Z)</option>
-            <option value="AuthorDesc" selected="@(ViewBag.CurrentSortOrder == "AuthorDesc")">Author (Z-A)</option>
-            <option value="YearAsc" selected="@(ViewBag.CurrentSortOrder == "YearAsc")">Year (Ascending)</option>
-            <option value="YearDesc" selected="@(ViewBag.CurrentSortOrder == "YearDesc")">Year (Descending)</option>
-            <option value="PriceAsc" selected="@(ViewBag.CurrentSortOrder == "PriceAsc")">Price (Low to High)</option>
-            <option value="PriceDesc" selected="@(ViewBag.CurrentSortOrder == "PriceDesc")">Price (High to Low)</option>
-        </select>
-    </div>
-    <input type="hidden" name="searchTerm" value="@ViewBag.CurrentSearchTerm" />
-    <input type="hidden" name="filterColumn" value="@ViewBag.CurrentFilterColumn" />
-    <input type="hidden" name="filterValue" value="@ViewBag.CurrentFilterValue" />
-</form>
-
-<table class="table">
+<table class="table" id="booksIndex">
     <thead>
         <tr>
             <th>@Html.DisplayNameFor(model => model.Title)</th>
@@ -70,9 +70,11 @@
                     @Html.DisplayFor(modelItem => item.Quantity)
                 </td>
                 <td>
-                    @* <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a> *@
+                    @if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
+                    {
+                        <a asp-action="Edit" asp-route-id="@item.Id">Edit</a>                   
+                        <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                    }
                 </td>
             </tr>
         }

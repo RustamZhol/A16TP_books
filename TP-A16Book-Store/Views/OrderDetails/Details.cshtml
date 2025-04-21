@@ -4,35 +4,40 @@
     ViewData["Title"] = "Details";
 }
 
-<h1>Details</h1>
+<h1 class="page-title">Orders Details</h1>
 
 <div>
-    <h4>OrderDetails</h4>
     <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
+    <dl class="row styled-dl">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.OrderId)
+        </dt>
+        <dd class="col-sm-10 styled-dd">
+            @Html.DisplayFor(model => model.OrderId)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.BookId)
+        </dt>
+        <dd class="col-sm-10 styled-dd">
+            @Html.DisplayFor(model => model.BookId)
+        </dd>
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Quantity)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10 styled-dd">
             @Html.DisplayFor(model => model.Quantity)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Price)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10 styled-dd">
             @Html.DisplayFor(model => model.Price)
         </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Order)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Order.Id)
-        </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Book)
         </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Book.Author)
+        <dd class="col-sm-10 styled-dd">
+            @Html.DisplayFor(model => model.Book.Author) - @Html.DisplayFor(model => model.Book.Title)
         </dd>
     </dl>
 </div>
