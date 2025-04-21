@@ -355,3 +355,56 @@ h1 {
     content: ":";
     margin-left: 0.3em;
 }
+
+.styled-list-container {
+    padding: 1em;
+    margin-bottom: 1em;
+    border-radius: 5px;
+}
+
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+    .styled-table th, .styled-table td {
+        color: black !important;
+        padding: 0.7em;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .styled-table th {
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .styled-table tr:hover {
+        background-color: rgba(255, 255, 255, 0.4);
+    }
+
+    .styled-table a {
+        color: inherit;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+        .styled-table a:hover {
+            color: #198754;
+            text-decoration: underline;
+        }
+
+.admin-actions a {
+    margin-left: 0.5em;
+    text-decoration: none;
+    color: #007bff;
+    transition: color 0.3s ease;
+}
+
+    .admin-actions a:hover {
+        color: #0056b3;
+        text-decoration: underline;
+    }
+
+    .admin-actions a:first-child {
+        margin-left: 0;
+    }

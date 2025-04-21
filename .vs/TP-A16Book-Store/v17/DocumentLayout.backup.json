@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "C:\\Users\\user\\source\\repos\\TP-A16Book-Store\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{E013D310-311A-4F04-B315-2265A4BFF587}|TP-A16Book-Store\\TP-A16Book-Store.csproj|c:\\users\\user\\source\\repos\\tp-a16book-store\\tp-a16book-store\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{E013D310-311A-4F04-B315-2265A4BFF587}|TP-A16Book-Store\\TP-A16Book-Store.csproj|solutionrelative:tp-a16book-store\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E013D310-311A-4F04-B315-2265A4BFF587}|TP-A16Book-Store\\TP-A16Book-Store.csproj|c:\\users\\user\\source\\repos\\tp-a16book-store\\tp-a16book-store\\views\\types\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E013D310-311A-4F04-B315-2265A4BFF587}|TP-A16Book-Store\\TP-A16Book-Store.csproj|solutionrelative:tp-a16book-store\\views\\types\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E013D310-311A-4F04-B315-2265A4BFF587}|TP-A16Book-Store\\TP-A16Book-Store.csproj|c:\\users\\user\\source\\repos\\tp-a16book-store\\tp-a16book-store\\views\\genres\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E013D310-311A-4F04-B315-2265A4BFF587}|TP-A16Book-Store\\TP-A16Book-Store.csproj|solutionrelative:tp-a16book-store\\views\\genres\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E013D310-311A-4F04-B315-2265A4BFF587}|TP-A16Book-Store\\TP-A16Book-Store.csproj|c:\\users\\user\\source\\repos\\tp-a16book-store\\tp-a16book-store\\views\\books\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{E013D310-311A-4F04-B315-2265A4BFF587}|TP-A16Book-Store\\TP-A16Book-Store.csproj|solutionrelative:tp-a16book-store\\views\\books\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -11,32 +23,12 @@
       "RelativeMoniker": "D:0:0:{E013D310-311A-4F04-B315-2265A4BFF587}|TP-A16Book-Store\\TP-A16Book-Store.csproj|solutionrelative:tp-a16book-store\\views\\authors\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E013D310-311A-4F04-B315-2265A4BFF587}|TP-A16Book-Store\\TP-A16Book-Store.csproj|c:\\users\\user\\source\\repos\\tp-a16book-store\\tp-a16book-store\\views\\types\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E013D310-311A-4F04-B315-2265A4BFF587}|TP-A16Book-Store\\TP-A16Book-Store.csproj|solutionrelative:tp-a16book-store\\views\\types\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E013D310-311A-4F04-B315-2265A4BFF587}|TP-A16Book-Store\\TP-A16Book-Store.csproj|c:\\users\\user\\source\\repos\\tp-a16book-store\\tp-a16book-store\\views\\genres\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E013D310-311A-4F04-B315-2265A4BFF587}|TP-A16Book-Store\\TP-A16Book-Store.csproj|solutionrelative:tp-a16book-store\\views\\genres\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E013D310-311A-4F04-B315-2265A4BFF587}|TP-A16Book-Store\\TP-A16Book-Store.csproj|c:\\users\\user\\source\\repos\\tp-a16book-store\\tp-a16book-store\\views\\authors\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E013D310-311A-4F04-B315-2265A4BFF587}|TP-A16Book-Store\\TP-A16Book-Store.csproj|solutionrelative:tp-a16book-store\\views\\authors\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E013D310-311A-4F04-B315-2265A4BFF587}|TP-A16Book-Store\\TP-A16Book-Store.csproj|c:\\users\\user\\source\\repos\\tp-a16book-store\\tp-a16book-store\\views\\books\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E013D310-311A-4F04-B315-2265A4BFF587}|TP-A16Book-Store\\TP-A16Book-Store.csproj|solutionrelative:tp-a16book-store\\views\\books\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{E013D310-311A-4F04-B315-2265A4BFF587}|TP-A16Book-Store\\TP-A16Book-Store.csproj|c:\\users\\user\\source\\repos\\tp-a16book-store\\tp-a16book-store\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E013D310-311A-4F04-B315-2265A4BFF587}|TP-A16Book-Store\\TP-A16Book-Store.csproj|solutionrelative:tp-a16book-store\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E013D310-311A-4F04-B315-2265A4BFF587}|TP-A16Book-Store\\TP-A16Book-Store.csproj|c:\\users\\user\\source\\repos\\tp-a16book-store\\tp-a16book-store\\controllers\\customuserscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E013D310-311A-4F04-B315-2265A4BFF587}|TP-A16Book-Store\\TP-A16Book-Store.csproj|solutionrelative:tp-a16book-store\\controllers\\customuserscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E013D310-311A-4F04-B315-2265A4BFF587}|TP-A16Book-Store\\TP-A16Book-Store.csproj|c:\\users\\user\\source\\repos\\tp-a16book-store\\tp-a16book-store\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{E013D310-311A-4F04-B315-2265A4BFF587}|TP-A16Book-Store\\TP-A16Book-Store.csproj|solutionrelative:tp-a16book-store\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E013D310-311A-4F04-B315-2265A4BFF587}|TP-A16Book-Store\\TP-A16Book-Store.csproj|c:\\users\\user\\source\\repos\\tp-a16book-store\\tp-a16book-store\\views\\customusers\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E013D310-311A-4F04-B315-2265A4BFF587}|TP-A16Book-Store\\TP-A16Book-Store.csproj|solutionrelative:tp-a16book-store\\views\\customusers\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E013D310-311A-4F04-B315-2265A4BFF587}|TP-A16Book-Store\\TP-A16Book-Store.csproj|c:\\users\\user\\source\\repos\\tp-a16book-store\\tp-a16book-store\\controllers\\typescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -54,84 +46,71 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 6,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\TP-A16Book-Store\\TP-A16Book-Store\\Views\\Types\\Details.cshtml",
-              "RelativeDocumentMoniker": "TP-A16Book-Store\\Views\\Types\\Details.cshtml",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\TP-A16Book-Store\\TP-A16Book-Store\\Views\\Types\\Details.cshtml",
-              "RelativeToolTip": "TP-A16Book-Store\\Views\\Types\\Details.cshtml",
-              "ViewState": "AgIAACEAAAAAAAAAAAAAADcAAABBAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-21T03:32:35.052Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\TP-A16Book-Store\\TP-A16Book-Store\\Views\\Genres\\Details.cshtml",
-              "RelativeDocumentMoniker": "TP-A16Book-Store\\Views\\Genres\\Details.cshtml",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\TP-A16Book-Store\\TP-A16Book-Store\\Views\\Genres\\Details.cshtml",
-              "RelativeToolTip": "TP-A16Book-Store\\Views\\Genres\\Details.cshtml",
-              "ViewState": "AgIAACQAAAAAAAAAAAAAADYAAABBAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-21T03:31:55.776Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\TP-A16Book-Store\\TP-A16Book-Store\\Views\\Authors\\Index.cshtml",
-              "RelativeDocumentMoniker": "TP-A16Book-Store\\Views\\Authors\\Index.cshtml",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\TP-A16Book-Store\\TP-A16Book-Store\\Views\\Authors\\Index.cshtml",
-              "RelativeToolTip": "TP-A16Book-Store\\Views\\Authors\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAJAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\TP-A16Book-Store\\TP-A16Book-Store\\Views\\Types\\Index.cshtml",
+              "RelativeDocumentMoniker": "TP-A16Book-Store\\Views\\Types\\Index.cshtml",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\TP-A16Book-Store\\TP-A16Book-Store\\Views\\Types\\Index.cshtml",
+              "RelativeToolTip": "TP-A16Book-Store\\Views\\Types\\Index.cshtml",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAAACcAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-21T03:28:47.937Z",
+              "WhenOpened": "2025-04-21T13:44:34.198Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\TP-A16Book-Store\\TP-A16Book-Store\\Views\\Genres\\Index.cshtml",
+              "RelativeDocumentMoniker": "TP-A16Book-Store\\Views\\Genres\\Index.cshtml",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\TP-A16Book-Store\\TP-A16Book-Store\\Views\\Genres\\Index.cshtml",
+              "RelativeToolTip": "TP-A16Book-Store\\Views\\Genres\\Index.cshtml",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAACcAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-21T13:43:19.489Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\TP-A16Book-Store\\TP-A16Book-Store\\Views\\Authors\\Details.cshtml",
-              "RelativeDocumentMoniker": "TP-A16Book-Store\\Views\\Authors\\Details.cshtml",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\TP-A16Book-Store\\TP-A16Book-Store\\Views\\Authors\\Details.cshtml",
-              "RelativeToolTip": "TP-A16Book-Store\\Views\\Authors\\Details.cshtml",
-              "ViewState": "AgIAADQAAAAAAAAAAAAAAEwAAABBAAAAAAAAAA==",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\TP-A16Book-Store\\TP-A16Book-Store\\Views\\Authors\\Index.cshtml",
+              "RelativeDocumentMoniker": "TP-A16Book-Store\\Views\\Authors\\Index.cshtml",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\TP-A16Book-Store\\TP-A16Book-Store\\Views\\Authors\\Index.cshtml",
+              "RelativeToolTip": "TP-A16Book-Store\\Views\\Authors\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-21T03:27:29.064Z",
+              "WhenOpened": "2025-04-21T13:39:15.416Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\TP-A16Book-Store\\TP-A16Book-Store\\Views\\Books\\Details.cshtml",
-              "RelativeDocumentMoniker": "TP-A16Book-Store\\Views\\Books\\Details.cshtml",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\TP-A16Book-Store\\TP-A16Book-Store\\Views\\Books\\Details.cshtml",
-              "RelativeToolTip": "TP-A16Book-Store\\Views\\Books\\Details.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEkAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-21T03:05:28.762Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\TP-A16Book-Store\\TP-A16Book-Store\\Views\\Books\\Index.cshtml",
               "RelativeDocumentMoniker": "TP-A16Book-Store\\Views\\Books\\Index.cshtml",
               "ToolTip": "C:\\Users\\user\\source\\repos\\TP-A16Book-Store\\TP-A16Book-Store\\Views\\Books\\Index.cshtml",
               "RelativeToolTip": "TP-A16Book-Store\\Views\\Books\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEsAAABJAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFEAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-21T02:48:03.738Z",
+              "WhenOpened": "2025-04-21T13:37:59.002Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\TP-A16Book-Store\\TP-A16Book-Store\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "TP-A16Book-Store\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\TP-A16Book-Store\\TP-A16Book-Store\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "TP-A16Book-Store\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAAACMAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-21T13:34:01.61Z",
               "EditorCaption": ""
             },
             {
@@ -144,38 +123,24 @@
               "RelativeToolTip": "TP-A16Book-Store\\Controllers\\CustomUsersController.cs",
               "ViewState": "AgIAACQAAAAAAAAAAAAqwDQAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-21T00:40:18.485Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-21T00:40:18.485Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 0,
               "Title": "site.css",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\TP-A16Book-Store\\TP-A16Book-Store\\wwwroot\\css\\site.css",
               "RelativeDocumentMoniker": "TP-A16Book-Store\\wwwroot\\css\\site.css",
               "ToolTip": "C:\\Users\\user\\source\\repos\\TP-A16Book-Store\\TP-A16Book-Store\\wwwroot\\css\\site.css",
               "RelativeToolTip": "TP-A16Book-Store\\wwwroot\\css\\site.css",
-              "ViewState": "AgIAAAoBAAAAAAAAAAAiwDIBAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAGIBAAAAAAAAAAAiwJoBAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2025-04-18T16:44:20.328Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Delete.cshtml",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\TP-A16Book-Store\\TP-A16Book-Store\\Views\\CustomUsers\\Delete.cshtml",
-              "RelativeDocumentMoniker": "TP-A16Book-Store\\Views\\CustomUsers\\Delete.cshtml",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\TP-A16Book-Store\\TP-A16Book-Store\\Views\\CustomUsers\\Delete.cshtml",
-              "RelativeToolTip": "TP-A16Book-Store\\Views\\CustomUsers\\Delete.cshtml",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAIwCAAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-21T02:05:27.465Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 7,
               "Title": "TypesController.cs",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\TP-A16Book-Store\\TP-A16Book-Store\\Controllers\\TypesController.cs",
               "RelativeDocumentMoniker": "TP-A16Book-Store\\Controllers\\TypesController.cs",
@@ -187,7 +152,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 8,
               "Title": "GenresController.cs",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\TP-A16Book-Store\\TP-A16Book-Store\\Controllers\\GenresController.cs",
               "RelativeDocumentMoniker": "TP-A16Book-Store\\Controllers\\GenresController.cs",
